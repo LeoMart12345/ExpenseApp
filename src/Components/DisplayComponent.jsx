@@ -1,9 +1,9 @@
-// DisplayComponent.jsx
+//DisplayComponent
 import React, { useContext } from 'react';
-import { UserProfileContext } from './UserProfileContext'; // Import the context
+import { UserProfileContext } from './UserProfileContext'; //import context file
 
 const DisplayComponent = () => {
-  const { profile } = useContext(UserProfileContext); // Access the profile data from context
+  const { profile } = useContext(UserProfileContext); //access profile information from context file
 
   return (
     <div>

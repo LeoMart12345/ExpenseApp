@@ -1,18 +1,28 @@
-import './App.css';
 import React from 'react';
-import FormComponent from './Components/FormComponent.jsx';  //import the 3 componeents for fucntionality
-import DisplayComponent from './Components/DisplayComponent.jsx'; 
+import './App.css';
+import FormComponent from './Components/FormComponent.jsx';
+import DisplayComponent from './Components/DisplayComponent.jsx';
+import ExpenseTable from './Components/ExpenseTable';
+import EmployeeTable from './Components/EmployeeTable'; // Import EmployeeTable component
+import CategoryTable from './Components/CategoryTable'; // Import CategoryTable component
 import { UserProfileProvider } from './Components/UserProfileContext';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 const App = () => {
   return (
     <div className="App">
       <h1>User Profile Manager</h1>
-      
-      {/* wrap components with UserProfileProvider */}
+
       <UserProfileProvider>
-        <FormComponent />   {/* form to enter the user information */}
-        <DisplayComponent /> {/* display the saved data information */}
+        <QueryClientProvider client={queryClient}>
+          <FormComponent />
+          <DisplayComponent />
+          <ExpenseTable /> {/* Display Expense data */}
+          <EmployeeTable /> {/* Display Employee data */}
+          <CategoryTable /> {/* Display Category data */}
+        </QueryClientProvider>
       </UserProfileProvider>
     </div>
   );

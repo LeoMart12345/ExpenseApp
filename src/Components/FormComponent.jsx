@@ -2,6 +2,7 @@
 
 import React, { useState, useContext } from 'react';
 import { UserProfileContext } from './UserProfileContext'; //imports the context file
+import './login.css';
 
 const FormComponent = () => {
   const { setProfile } = useContext(UserProfileContext); //gets the profile information from contect file

@@ -23,8 +23,8 @@ const FormComponent = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="profile-container">
+    <form onSubmit={handleSubmit} className="profile-container">
+      <div>
         <label>Name: </label>
         <input
           type="text"

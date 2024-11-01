@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './Components/login.css'
 import FormComponent from './Components/FormComponent.jsx';
 import DisplayComponent from './Components/DisplayComponent.jsx';
 import ExpenseTable from './Components/ExpenseTable';
@@ -13,7 +14,7 @@ const queryClient = new QueryClient();
 const App = () => {
   return (
     <div className="App">
-      <h1>User Profile Manager</h1>
+      <h2 className='profile-container'>User Profile Manager</h2>
 
       <UserProfileProvider>
         <QueryClientProvider client={queryClient}>

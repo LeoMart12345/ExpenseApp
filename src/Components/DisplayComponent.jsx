@@ -1,4 +1,5 @@
 //DisplayComponent
+import './Login.css';
 import React, { useContext } from 'react';
 import { UserProfileContext } from './UserProfileContext'; //import context file
 

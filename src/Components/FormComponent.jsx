@@ -24,7 +24,7 @@ const FormComponent = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className="profile-container">
         <label>Name: </label>
         <input
           type="text"

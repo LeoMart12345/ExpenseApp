@@ -8,7 +8,7 @@ const DisplayComponent = () => {
 
   return (
     <div>
-      <h2>Profile Information</h2>
+      <h2 className="profile-container">Profile Information</h2>
       <p><strong>Name:</strong> {profile.name}</p>
       <p><strong>Email:</strong> {profile.email}</p>
       <p><strong>Bio:</strong> {profile.bio}</p>

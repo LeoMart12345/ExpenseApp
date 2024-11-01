@@ -7,8 +7,8 @@ const DisplayComponent = () => {
   const { profile } = useContext(UserProfileContext); //access profile information from context file
 
   return (
-    <div>
-      <h2 className="profile-container">Profile Information</h2>
+    <div className="profile-container">
+      <h2>Profile Information</h2>
       <p><strong>Name:</strong> {profile.name}</p>
       <p><strong>Email:</strong> {profile.email}</p>
       <p><strong>Bio:</strong> {profile.bio}</p>
